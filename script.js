@@ -20,20 +20,16 @@ const observer = new IntersectionObserver(entries => {
 
 sections.forEach(section => observer.observe(section));
 
-// Dark mode toggle with sun/moon icon
+// Dark mode toggle without icons
 const toggle = document.getElementById('darkModeToggle');
-const toggleIcon = document.getElementById('toggleIcon');
 
 toggle.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
-  
+
   if(document.body.classList.contains('dark-mode')) {
-    toggleIcon.textContent = '☀️'; // sun icon when dark mode is active
-    toggle.textContent = ' Light Mode';
-    toggle.prepend(toggleIcon);
+    toggle.textContent = 'Light Mode';
   } else {
-    toggleIcon.textContent = '🌙'; // moon icon for light mode
-    toggle.textContent = ' Dark Mode';
-    toggle.prepend(toggleIcon);
+    toggle.textContent = 'Dark Mode';
   }
 });
+
