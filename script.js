@@ -1,4 +1,4 @@
-// Smooth scrolling
+// Smooth scrolling for nav links
 document.querySelectorAll('nav a').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
@@ -20,9 +20,20 @@ const observer = new IntersectionObserver(entries => {
 
 sections.forEach(section => observer.observe(section));
 
-// Dark mode toggle
+// Dark mode toggle with sun/moon icon
 const toggle = document.getElementById('darkModeToggle');
+const toggleIcon = document.getElementById('toggleIcon');
+
 toggle.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
+  
+  if(document.body.classList.contains('dark-mode')) {
+    toggleIcon.textContent = '☀️'; // sun icon when dark mode is active
+    toggle.textContent = ' Light Mode';
+    toggle.prepend(toggleIcon);
+  } else {
+    toggleIcon.textContent = '🌙'; // moon icon for light mode
+    toggle.textContent = ' Dark Mode';
+    toggle.prepend(toggleIcon);
+  }
 });
-
