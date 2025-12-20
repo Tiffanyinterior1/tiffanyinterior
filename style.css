@@ -151,3 +151,8 @@ footer {
   font-size: 0.8rem;
   color: #666;
 }
+
+.gallery-item {
+  text-decoration: none;
+  color: inherit;
+}
