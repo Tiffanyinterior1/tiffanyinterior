@@ -287,3 +287,39 @@ section.visible {
     flex: 1;                    /* text takes remaining space */
   }
 }
+/* Smooth page transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better project page spacing */
+.project-intro {
+  padding: 2rem 1rem;
+}
+
+/* Gallery hover smoother */
+.gallery-item img {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Subtle nav blur */
+nav {
+  backdrop-filter: blur(6px);
+}
+
+/* Better mobile spacing */
+@media (max-width: 768px) {
+
+  header {
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  section {
+    padding: 3rem 1rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+}
