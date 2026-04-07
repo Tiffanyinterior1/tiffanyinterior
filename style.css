@@ -213,7 +213,12 @@ h2 {
 .gallery-item:hover .caption {
   opacity: 1;
 }
-
+/* Make embedded iframes responsive */
+.project-gallery iframe {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
 /* Notes */
 .note {
   margin-top: 1.5rem;
