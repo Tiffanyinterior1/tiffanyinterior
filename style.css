@@ -162,16 +162,20 @@ h2 {
   gap: 20px;
 }
 
+/* Uniform gallery image size */
 .gallery-item {
   position: relative;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  aspect-ratio: 4 / 3; /* keeps all images same ratio */
 }
 
 .gallery-item img {
   width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures image fills container without stretching */
   display: block;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -202,7 +206,6 @@ h2 {
   opacity: 1;
   transform: translateY(0);
 }
-
 /* Dark Mode Captions */
 body.dark-mode .gallery-item .caption {
   background: rgba(0, 0, 0, 0.7);
